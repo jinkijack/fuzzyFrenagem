@@ -49,26 +49,53 @@ RULEBLOCK No1
     // Use 'max' accumulation method
     ACCU : MAX;
 	
-    RULE 1 : IF Distancia IS muito_perto 
-                THEN pressao_freio IS muito_forte;
+    RULE 1 : IF Velocidade IS muito_lento and Distancia is muito_perto
+	       THEN pressao_freio IS leve;
 
-    RULE 2 : IF Velocidade IS muito_lento and Distancia is perto 
-                THEN pressao_freio IS leve; 
+	RULE 2 : IF Velocidade IS muito_lento and Distancia is perto
+		   THEN pressao_freio IS leve;
 
-    RULE 3 : IF Velocidade IS lento and Distancia is longe 
-                THEN pressao_freio IS leve; 
-				
-	RULE 4: IF Velocidade IS rapido AND Distancia is perto 
-                THEN pressao_freio is forte;
+	RULE 3 : IF Velocidade IS muito_lento and Distancia is longe
+		   THEN pressao_freio IS leve;
 
-	RULE 5: IF Distancia IS perto AND Velocidade IS muito_rapido 
-               THEN pressao_freio IS forte;
-			   
-	RULE 6: IF Distancia IS muito_longe AND Velocidade IS rapido 
-               THEN pressao_freio IS leve;
-				
-	RULE 6: IF Velocidade IS lento AND Distancia IS longe 
-               THEN pressao_freio IS muito_leve;
+	RULE 4 : IF Velocidade IS muito_lento and Distancia is muito_longe
+		   THEN pressao_freio IS muito_leve;
+
+	RULE 5 : IF Velocidade IS lento and Distancia is muito_perto
+		   THEN pressao_freio IS forte;
+
+	RULE 6 : IF Velocidade IS lento and Distancia is perto
+		   THEN pressao_freio IS forte;
+
+	RULE 7 : IF Velocidade IS lento and Distancia is longe
+		   THEN pressao_freio IS leve;
+
+	RULE 8 : IF Velocidade IS lento and Distancia is muito_longe
+		   THEN pressao_freio IS muito_leve;
+
+	RULE 9 : IF Velocidade IS rapido and Distancia is muito_perto
+		   THEN pressao_freio IS muito_forte;
+
+	RULE 10 : IF Velocidade IS rapido and Distancia is perto
+		   THEN pressao_freio IS forte;
+
+	RULE 11 : IF Velocidade IS rapido and Distancia is longe
+		   THEN pressao_freio IS leve;
+
+	RULE 12 : IF Velocidade IS rapido and Distancia is muito_longe
+		   THEN pressao_freio IS leve;
+
+	RULE 13 : IF Velocidade IS muito_rapido and Distancia is muito_perto
+		   THEN pressao_freio IS muito_forte;
+
+	RULE 14 : IF Velocidade IS muito_rapido and Distancia is perto
+		   THEN pressao_freio IS muito_forte;
+
+	RULE 15 : IF Velocidade IS muito_rapido and Distancia is longe
+		   THEN pressao_freio IS forte;
+
+	RULE 16 : IF Velocidade IS muito_rapido and Distancia is muito_longe
+		   THEN pressao_freio IS leve;
 
 	   
 END_RULEBLOCK
