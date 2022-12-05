@@ -15,15 +15,15 @@ END_VAR
 // Fuzzify input variable 'Temperature'
 FUZZIFY Distancia
 	TERM muito_perto := (0, 1) (20, 0); 
-    TERM perto := (10, 0) (20, 1) (60,1) (130,0); 
-    TERM longe := (60, 0) (100,1) (180,1) (350,0);
-    TERM muito_longe := (250, 0) (350, 1) (500, 1);
+    	TERM perto := (10, 0) (20, 1) (60,1) (130,0); 
+    	TERM longe := (60, 0) (100,1) (180,1) (350,0);
+    	TERM muito_longe := (250, 0) (350, 1) (500, 1);
 END_FUZZIFY
 
 // Fuzzify input variable 'Moisture'
 FUZZIFY Velocidade
 	TERM muito_lento := (0, 1) (5, 0);  
-    TERM lento := (4, 0) (18, 1) (30,0);
+    	TERM lento := (4, 0) (18, 1) (30,0);
 	TERM rapido := (20,0) (35,1) (43,1) (60,0);
 	TERM muito_rapido := (45, 0) (55, 1) (100,1);
 END_FUZZIFY
@@ -31,9 +31,9 @@ END_FUZZIFY
 // Defzzzify output variable 'ventilation'
 DEFUZZIFY pressao_freio
 	TERM muito_leve := (0,1) (10,1) (20,0);
-    TERM leve := (10,0) (20,1) (50,0);
-    TERM forte := (40,0) (60,1) (80,0);
-    TERM muito_forte := (70,0) (88,1) (100,1);
+    	TERM leve := (10,0) (20,1) (50,0);
+    	TERM forte := (40,0) (60,1) (80,0);
+    	TERM muito_forte := (70,0) (88,1) (100,1);
     // Use 'Center Of Gravity' defuzzification method
     METHOD : COA;
     // Default value is 0 (if no rule activates defuzzifier)
